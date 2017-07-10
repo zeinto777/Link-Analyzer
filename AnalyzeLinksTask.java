@@ -1,6 +1,3 @@
-package com.axis41.core.jobs;
-
-
 import com.adobe.granite.maintenance.MaintenanceConstants;
 import com.axis41.core.service.ReportGenerator;
 import com.axis41.core.util.StreamUtils;
