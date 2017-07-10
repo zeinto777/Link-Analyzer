@@ -1,37 +1,3 @@
-import com.adobe.granite.maintenance.MaintenanceConstants;
-import com.axis41.core.service.ReportGenerator;
-import com.axis41.core.util.StreamUtils;
-import com.day.cq.dam.api.AssetManager;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.felix.scr.annotations.*;
-import org.apache.felix.scr.annotations.Properties;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.sling.api.resource.LoginException;
-import org.apache.sling.api.resource.Resource;
-import org.apache.sling.api.resource.ResourceResolver;
-import org.apache.sling.api.resource.ResourceResolverFactory;
-import org.apache.sling.event.jobs.Job;
-import org.apache.sling.event.jobs.consumer.JobConsumer;
-import org.apache.sling.event.jobs.consumer.JobExecutionContext;
-import org.apache.sling.event.jobs.consumer.JobExecutionResult;
-import org.apache.sling.event.jobs.consumer.JobExecutor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import javax.jcr.query.Query;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.*;
-import java.util.regex.MatchResult;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import static org.apache.commons.lang3.StringUtils.EMPTY;
-
 @Component(metatype = true,
         label = "Analyze Links Maintenance Task",
         description = "Maintenance Task which analyzing links under specific path and create report")
